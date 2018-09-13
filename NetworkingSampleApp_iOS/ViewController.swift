@@ -17,10 +17,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print(Networking.getWiFiAddress())
 
+        doNothing_justCompile()
+
     }
 
     @IBAction func startScanning(_ sender: Any) {
 
+    }
+
+    func doNothing_justCompile() {
+
+        let ipAddress = IPAddress("1.1.1.1")
+        let macAddress = MacAddress(hex: "01:02:03:04:05:06")
+        print(ipAddress.byteString)
+        print(macAddress.byteString)
+
+        let _ = "0f0f0a00d00f0".bytesFromHex
     }
 }
 

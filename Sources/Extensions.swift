@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension String {
+public extension String {
 
-    var bytesFromHex: [UInt8] {
+    public var bytesFromHex: [UInt8] {
 
         var bytes = [UInt8]()
 
