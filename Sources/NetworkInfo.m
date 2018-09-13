@@ -11,7 +11,7 @@
 #import <stdlib.h>
 #import <net/if.h>
 #import <Foundation/Foundation.h>
-#include "Networking.h"
+#include "NetworkInfo.h"
 
 
 #define ROUNDUP(a) \

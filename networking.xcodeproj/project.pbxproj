@@ -7,34 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		603A0E081FD0321300176FB8 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603A0E071FD0321300176FB8 /* StreamReader.swift */; };
 		603A0E0A1FD035C200176FB8 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */; };
-		603A0E0C1FD04DF200176FB8 /* Fixtures.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 603A0E0B1FD04DF200176FB8 /* Fixtures.bundle */; };
 		60ED2E06214A85DA0056C720 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E03214A85D90056C720 /* Networking.swift */; };
-		60ED2E07214A85DA0056C720 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E04214A85D90056C720 /* Networking.m */; };
-		60ED2E08214A85DA0056C720 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E05214A85DA0056C720 /* Networking.h */; };
+		60ED2E07214A85DA0056C720 /* NetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E04214A85D90056C720 /* NetworkInfo.m */; };
+		60ED2E08214A85DA0056C720 /* NetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E05214A85DA0056C720 /* NetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60ED2E0B214A86610056C720 /* IPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E09214A86610056C720 /* IPAddress.swift */; };
 		60ED2E0C214A86610056C720 /* IPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E09214A86610056C720 /* IPAddress.swift */; };
 		60ED2E0D214A86610056C720 /* MacAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0A214A86610056C720 /* MacAddress.swift */; };
 		60ED2E0E214A86610056C720 /* MacAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0A214A86610056C720 /* MacAddress.swift */; };
 		60ED2E10214A86890056C720 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0F214A86890056C720 /* Extensions.swift */; };
 		60ED2E11214A86890056C720 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0F214A86890056C720 /* Extensions.swift */; };
-		60F7AD7B1FCF7A1B001E34F0 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD791FCF7A1A001E34F0 /* CocoaAsyncSocket.framework */; };
+		60ED2E16214A92CF0056C720 /* SwiftyNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E13214A925D0056C720 /* SwiftyNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60ED2E17214A93790056C720 /* SwiftyNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E13214A925D0056C720 /* SwiftyNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60ED2E18214A93A30056C720 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E03214A85D90056C720 /* Networking.swift */; };
+		60ED2E19214A93A30056C720 /* IPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E09214A86610056C720 /* IPAddress.swift */; };
+		60ED2E1A214A93A30056C720 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0F214A86890056C720 /* Extensions.swift */; };
+		60ED2E1B214A93A30056C720 /* MacAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E0A214A86610056C720 /* MacAddress.swift */; };
+		60ED2E1C214A93A30056C720 /* NetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E04214A85D90056C720 /* NetworkInfo.m */; };
+		60ED2E1D214A93E50056C720 /* NetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E05214A85DA0056C720 /* NetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60F7AD891FCFEA96001E34F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7AD881FCFEA96001E34F0 /* AppDelegate.swift */; };
 		60F7AD8B1FCFEA96001E34F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7AD8A1FCFEA96001E34F0 /* ViewController.swift */; };
 		60F7AD8E1FCFEA96001E34F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F7AD8C1FCFEA96001E34F0 /* Main.storyboard */; };
 		60F7AD901FCFEA96001E34F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60F7AD8F1FCFEA96001E34F0 /* Assets.xcassets */; };
 		60F7AD931FCFEA96001E34F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F7AD911FCFEA96001E34F0 /* LaunchScreen.storyboard */; };
-		60F7AD9C1FCFED1C001E34F0 /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F7AD771FCF7A05001E34F0 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		60F7AD9E1FCFED5A001E34F0 /* Snmp.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* Snmp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		60F7ADA81FD02CB2001E34F0 /* Snmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* Snmp.framework */; };
-		60F7ADC01FD02E17001E34F0 /* DatagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADB51FD02E14001E34F0 /* DatagramTests.swift */; };
+		60F7AD9E1FCFED5A001E34F0 /* SwiftyNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60F7ADA81FD02CB2001E34F0 /* SwiftyNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; };
 		60F7ADC11FD02E17001E34F0 /* MacAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */; };
 		60F7ADC21FD02E17001E34F0 /* VendorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADB71FD02E15001E34F0 /* VendorTests.swift */; };
-		60F7ADC51FD02E17001E34F0 /* OUIParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADBA1FD02E17001E34F0 /* OUIParser.m */; };
 		60F7ADC61FD02E17001E34F0 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */; };
-		60F7ADC91FD02E6E001E34F0 /* CocoaAsyncSocket.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD771FCF7A05001E34F0 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		60F7ADCA1FD03010001E34F0 /* Snmp.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* Snmp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60F7ADCA1FD03010001E34F0 /* SwiftyNetworking.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				60F7AD9E1FCFED5A001E34F0 /* Snmp.framework in CopyFiles */,
-				60F7AD9C1FCFED1C001E34F0 /* CocoaAsyncSocket.framework in CopyFiles */,
+				60F7AD9E1FCFED5A001E34F0 /* SwiftyNetworking.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,8 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				60F7ADCA1FD03010001E34F0 /* Snmp.framework in Copy Frameworks */,
-				60F7ADC91FD02E6E001E34F0 /* CocoaAsyncSocket.framework in Copy Frameworks */,
+				60F7ADCA1FD03010001E34F0 /* SwiftyNetworking.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,22 +80,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		603A0E071FD0321300176FB8 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
-		603A0E0B1FD04DF200176FB8 /* Fixtures.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fixtures.bundle; sourceTree = "<group>"; };
 		60ED2E03214A85D90056C720 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		60ED2E04214A85D90056C720 /* Networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
-		60ED2E05214A85DA0056C720 /* Networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		60ED2E04214A85D90056C720 /* NetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInfo.m; sourceTree = "<group>"; };
+		60ED2E05214A85DA0056C720 /* NetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInfo.h; sourceTree = "<group>"; };
 		60ED2E09214A86610056C720 /* IPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPAddress.swift; sourceTree = "<group>"; };
 		60ED2E0A214A86610056C720 /* MacAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacAddress.swift; sourceTree = "<group>"; };
 		60ED2E0F214A86890056C720 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		60ED2E12214A8D3E0056C720 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		60F7AD421FCF741B001E34F0 /* Snmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snmp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60ED2E13214A925D0056C720 /* SwiftyNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyNetworking.h; sourceTree = "<group>"; };
+		60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7AD461FCF741B001E34F0 /* Info_iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_iOS.plist; sourceTree = "<group>"; };
-		60F7AD501FCF743D001E34F0 /* Snmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snmp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F7AD501FCF743D001E34F0 /* SwiftyNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7AD531FCF743E001E34F0 /* Info_tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_tvOS.plist; sourceTree = "<group>"; };
-		60F7AD771FCF7A05001E34F0 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = SOURCE_ROOT; };
-		60F7AD791FCF7A1A001E34F0 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/tvOS/CocoaAsyncSocket.framework; sourceTree = SOURCE_ROOT; };
 		60F7AD861FCFEA96001E34F0 /* NetworkingSampleApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingSampleApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7AD881FCFEA96001E34F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60F7AD8A1FCFEA96001E34F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,13 +101,8 @@
 		60F7AD941FCFEA96001E34F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60F7ADA31FD02CB1001E34F0 /* Networking_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Networking_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7ADA71FD02CB2001E34F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60F7ADAE1FD02E11001E34F0 /* Snmp_iOSTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snmp_iOSTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		60F7ADB11FD02E13001E34F0 /* OUIParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OUIParser.h; sourceTree = "<group>"; };
-		60F7ADB31FD02E14001E34F0 /* SnmpWalkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnmpWalkerTests.swift; sourceTree = "<group>"; };
-		60F7ADB51FD02E14001E34F0 /* DatagramTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatagramTests.swift; sourceTree = "<group>"; };
 		60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacAddressTests.swift; sourceTree = "<group>"; };
 		60F7ADB71FD02E15001E34F0 /* VendorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorTests.swift; sourceTree = "<group>"; };
-		60F7ADBA1FD02E17001E34F0 /* OUIParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OUIParser.m; sourceTree = "<group>"; };
 		60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F7AD7B1FCF7A1B001E34F0 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F7ADA81FD02CB2001E34F0 /* Snmp.framework in Frameworks */,
+				60F7ADA81FD02CB2001E34F0 /* SwiftyNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +153,8 @@
 		60F7AD431FCF741B001E34F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60F7AD421FCF741B001E34F0 /* Snmp.framework */,
-				60F7AD501FCF743D001E34F0 /* Snmp.framework */,
+				60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */,
+				60F7AD501FCF743D001E34F0 /* SwiftyNetworking.framework */,
 				60F7AD861FCFEA96001E34F0 /* NetworkingSampleApp_iOS.app */,
 				60F7ADA31FD02CB1001E34F0 /* Networking_iOSTests.xctest */,
 			);
@@ -175,15 +164,15 @@
 		60F7AD581FCF74A7001E34F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				60ED2E13214A925D0056C720 /* SwiftyNetworking.h */,
+				60ED2E03214A85D90056C720 /* Networking.swift */,
 				60ED2E09214A86610056C720 /* IPAddress.swift */,
 				60ED2E0F214A86890056C720 /* Extensions.swift */,
 				60ED2E0A214A86610056C720 /* MacAddress.swift */,
-				60ED2E05214A85DA0056C720 /* Networking.h */,
-				60ED2E04214A85D90056C720 /* Networking.m */,
-				60ED2E03214A85D90056C720 /* Networking.swift */,
+				60ED2E05214A85DA0056C720 /* NetworkInfo.h */,
+				60ED2E04214A85D90056C720 /* NetworkInfo.m */,
 				60F7AD461FCF741B001E34F0 /* Info_iOS.plist */,
 				60F7AD531FCF743E001E34F0 /* Info_tvOS.plist */,
-				60ED2E12214A8D3E0056C720 /* BridgingHeader.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -191,8 +180,6 @@
 		60F7AD761FCF79EE001E34F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60F7AD771FCF7A05001E34F0 /* CocoaAsyncSocket.framework */,
-				60F7AD791FCF7A1A001E34F0 /* CocoaAsyncSocket.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -213,18 +200,11 @@
 		60F7ADA41FD02CB2001E34F0 /* Networking_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				603A0E0B1FD04DF200176FB8 /* Fixtures.bundle */,
-				60F7ADB51FD02E14001E34F0 /* DatagramTests.swift */,
 				60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */,
-				60F7ADB11FD02E13001E34F0 /* OUIParser.h */,
-				60F7ADBA1FD02E17001E34F0 /* OUIParser.m */,
-				60F7ADB31FD02E14001E34F0 /* SnmpWalkerTests.swift */,
 				60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */,
-				603A0E071FD0321300176FB8 /* StreamReader.swift */,
 				60F7ADB71FD02E15001E34F0 /* VendorTests.swift */,
 				603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */,
 				60F7ADA71FD02CB2001E34F0 /* Info.plist */,
-				60F7ADAE1FD02E11001E34F0 /* Snmp_iOSTests-Bridging-Header.h */,
 			);
 			path = Networking_iOSTests;
 			sourceTree = "<group>";
@@ -236,7 +216,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60ED2E08214A85DA0056C720 /* Networking.h in Headers */,
+				60ED2E17214A93790056C720 /* SwiftyNetworking.h in Headers */,
+				60ED2E08214A85DA0056C720 /* NetworkInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +225,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60ED2E16214A92CF0056C720 /* SwiftyNetworking.h in Headers */,
+				60ED2E1D214A93E50056C720 /* NetworkInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +248,7 @@
 			);
 			name = "Networking iOS";
 			productName = "Snmp iOS";
-			productReference = 60F7AD421FCF741B001E34F0 /* Snmp.framework */;
+			productReference = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		60F7AD4F1FCF743D001E34F0 /* Networking tvOS */ = {
@@ -283,7 +266,7 @@
 			);
 			name = "Networking tvOS";
 			productName = "Snmp tvOS";
-			productReference = 60F7AD501FCF743D001E34F0 /* Snmp.framework */;
+			productReference = 60F7AD501FCF743D001E34F0 /* SwiftyNetworking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		60F7AD851FCFEA96001E34F0 /* NetworkingSampleApp_iOS */ = {
@@ -403,7 +386,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603A0E0C1FD04DF200176FB8 /* Fixtures.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +398,7 @@
 			files = (
 				60ED2E10214A86890056C720 /* Extensions.swift in Sources */,
 				60ED2E0B214A86610056C720 /* IPAddress.swift in Sources */,
-				60ED2E07214A85DA0056C720 /* Networking.m in Sources */,
+				60ED2E07214A85DA0056C720 /* NetworkInfo.m in Sources */,
 				60ED2E06214A85DA0056C720 /* Networking.swift in Sources */,
 				60ED2E0D214A86610056C720 /* MacAddress.swift in Sources */,
 			);
@@ -426,6 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60ED2E18214A93A30056C720 /* Networking.swift in Sources */,
+				60ED2E1A214A93A30056C720 /* Extensions.swift in Sources */,
+				60ED2E1C214A93A30056C720 /* NetworkInfo.m in Sources */,
+				60ED2E1B214A93A30056C720 /* MacAddress.swift in Sources */,
+				60ED2E19214A93A30056C720 /* IPAddress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,13 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F7ADC51FD02E17001E34F0 /* OUIParser.m in Sources */,
 				60ED2E0C214A86610056C720 /* IPAddress.swift in Sources */,
-				60F7ADC01FD02E17001E34F0 /* DatagramTests.swift in Sources */,
 				603A0E0A1FD035C200176FB8 /* XCTestCase+Extensions.swift in Sources */,
 				60F7ADC61FD02E17001E34F0 /* TestsHelper.swift in Sources */,
 				60ED2E11214A86890056C720 /* Extensions.swift in Sources */,
-				603A0E081FD0321300176FB8 /* StreamReader.swift in Sources */,
 				60ED2E0E214A86610056C720 /* MacAddress.swift in Sources */,
 				60F7ADC21FD02E17001E34F0 /* VendorTests.swift in Sources */,
 				60F7ADC11FD02E17001E34F0 /* MacAddressTests.swift in Sources */,
@@ -615,12 +599,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-iOS";
-				PRODUCT_NAME = Snmp;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-SwiftyNetworking-iOS";
+				PRODUCT_NAME = SwiftyNetworking;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -683,11 +666,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-iOS";
-				PRODUCT_NAME = Snmp;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-SwiftyNetworking-iOS";
+				PRODUCT_NAME = SwiftyNetworking;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = Sources/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,8 +739,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-tvOS";
-				PRODUCT_NAME = Snmp;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-SwiftyNetworking-tvOS";
+				PRODUCT_NAME = SwiftyNetworking;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -824,8 +806,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-tvOS";
-				PRODUCT_NAME = Snmp;
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-SwiftyNetworking-tvOS";
+				PRODUCT_NAME = SwiftyNetworking;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -889,12 +871,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = SnmpSampleApp_iOS/Info.plist;
+				INFOPLIST_FILE = NetworkingSampleApp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.SnmpSampleApp-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.NetworkingSampleApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -949,11 +931,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = SnmpSampleApp_iOS/Info.plist;
+				INFOPLIST_FILE = NetworkingSampleApp_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.SnmpSampleApp-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.NetworkingSampleApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1013,16 +995,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Snmp_iOSTests/Info.plist;
+				INFOPLIST_FILE = Networking_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Snmp-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snmp_iOSTests/Snmp_iOSTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1073,14 +1055,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Snmp_iOSTests/Info.plist;
+				INFOPLIST_FILE = Networking_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Snmp-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "nl.alt-n.Networking-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Snmp_iOSTests/Snmp_iOSTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

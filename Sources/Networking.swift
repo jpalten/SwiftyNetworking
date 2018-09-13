@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Networking {
+public class Networking {
 
     // Return IP address of WiFi interface (en0) as a String, or `nil`
-    class func getWiFiAddress() -> (String?, String?) {
+    public class func getWiFiAddress() -> (String?, String?) {
         var address: String?
         var subnet: String?
 
@@ -69,12 +69,13 @@ class Networking {
         return (address, subnet)
     }
 
-    class func getGateway() -> String? {
+    public class func getGateway() -> String? {
 
         return getDefaultGatewayIp()
     }
 
-    class var ipAddress: String? {
+    public class var ipAddress: String? {
+        
         let (ipAddress, _ ) = Networking.getWiFiAddress()
         return ipAddress
     }
