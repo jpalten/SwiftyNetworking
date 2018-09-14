@@ -42,6 +42,7 @@ public struct MacAddress {
     }
 
     public init(numbers: [UInt8]) {
+
         self.numbers = numbers
     }
 
@@ -57,7 +58,7 @@ public struct MacAddress {
 
     public init(bytes: String) {
 
-        let parts = bytes.components(separatedBy:".").map { (byteStr) -> UInt8 in
+        let parts = bytes.components(separatedBy: ".").map { (byteStr) -> UInt8 in
 
             return UInt8(byteStr) ?? 0
         }
@@ -72,12 +73,13 @@ public struct MacAddress {
     public init?(_ str: String?) {
 
         guard let str = str else {
+
             return nil
         }
 
-        if str.components(separatedBy:":").count == 6 || str.lengthOfBytes(using: .utf8) == 12 {
+        if str.components(separatedBy: ":").count == 6 || str.lengthOfBytes(using: .utf8) == 12 {
 
-            self = MacAddress(hex:str)
+            self = MacAddress(hex: str)
         } else if str.utf8.count == 6 {
 
             self = MacAddress(chars: str)
@@ -95,15 +97,15 @@ public struct MacAddress {
     }
 }
 
-extension MacAddress : CustomDebugStringConvertible {
+extension MacAddress: CustomDebugStringConvertible {
 
     public var debugDescription: String {
+
         return hexString
     }
 }
 
-
-extension MacAddress : Equatable, Comparable {
+extension MacAddress: Equatable, Comparable {
 
     public static func == (lhs: MacAddress, rhs: MacAddress) -> Bool {
 
@@ -115,7 +117,7 @@ extension MacAddress : Equatable, Comparable {
     }
 }
 
-extension MacAddress : Hashable {
+extension MacAddress: Hashable {
 
     public var hashValue: Int {
 
@@ -123,7 +125,7 @@ extension MacAddress : Hashable {
     }
 }
 
-extension MacAddress : printable {
+extension MacAddress: printable {
 
     public var description: String {
 
@@ -131,7 +133,6 @@ extension MacAddress : printable {
     }
 }
 
-extension MacAddress : CustomStringConvertible {
+extension MacAddress: CustomStringConvertible {
 
 }
-

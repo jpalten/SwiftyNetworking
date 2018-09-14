@@ -15,7 +15,7 @@ public extension String {
 
         if let regex = try? NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive) {
 
-            regex.enumerateMatches(in: self, options: [], range: NSRange(0..<count)) { match, flags, stop in
+            regex.enumerateMatches(in: self, options: [], range: NSRange(0..<count)) { match, _, _ in
 
                 let hexString = (self as NSString).substring(with: match!.range)
                 if let byte = UInt8(hexString, radix: 16) {
@@ -28,7 +28,6 @@ public extension String {
         return bytes
     }
 }
-
 
 protocol printable: CustomStringConvertible {
 
@@ -50,4 +49,3 @@ extension printable {
         return byteString
     }
 }
-

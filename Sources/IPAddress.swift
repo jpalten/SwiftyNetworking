@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public struct IPAddress: printable {
 
     let numbers: [UInt8]
@@ -55,7 +54,7 @@ public struct IPAddress: printable {
     }
     public init(_ bytes: String) {
 
-        let parts = bytes.components(separatedBy:".").map { (byteStr) -> UInt8 in
+        let parts = bytes.components(separatedBy: ".").map { (byteStr) -> UInt8 in
 
             return UInt8(byteStr) ?? 0
             } as [UInt8]
@@ -81,10 +80,11 @@ public struct IPAddress: printable {
 
     public static func isValid(str ipStr: String) -> Bool {
 
-        return ipStr.components(separatedBy:".").count == 4
+        return ipStr.components(separatedBy: ".").count == 4
     }
 
     public var isValid: Bool {
+
         return numbers.count == 4
     }
 
@@ -93,10 +93,10 @@ public struct IPAddress: printable {
 func + (left: IPAddress, right: Int) -> IPAddress {
 
     let value = left.uint32Value + UInt32(right)
-    return IPAddress(uint32Value:value)
+    return IPAddress(uint32Value: value)
 }
 
-extension IPAddress : Equatable, Comparable {
+extension IPAddress: Equatable, Comparable {
 
     public static func == (lhs: IPAddress, rhs: IPAddress) -> Bool {
 
@@ -125,7 +125,7 @@ extension IPAddress : Equatable, Comparable {
     }
 }
 
-extension IPAddress : Hashable {
+extension IPAddress: Hashable {
 
     public var hashValue: Int {
 
@@ -133,17 +133,14 @@ extension IPAddress : Hashable {
     }
 }
 
-extension IPAddress : CustomStringConvertible {
+extension IPAddress: CustomStringConvertible {
 
 }
 
-
-extension IPAddress : CustomDebugStringConvertible {
+extension IPAddress: CustomDebugStringConvertible {
 
     public var debugDescription: String {
+
         return byteString
     }
 }
-
-
-

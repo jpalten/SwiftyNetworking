@@ -18,12 +18,12 @@ extension XCTestCase {
         }
     }
 
-    func loadJsonDict(fromFixture resourceName: String) -> [String:Any]? {
+    func loadJsonDict(fromFixture resourceName: String) -> [String: Any]? {
 
         let filename = "\(resourceName).json"
 
         guard let jsonData = loadFixtureData(fromFile: filename),
-            let dict = (try? JSONSerialization.jsonObject(with: jsonData, options: [])) as? [String:Any]  else {
+            let dict = (try? JSONSerialization.jsonObject(with: jsonData, options: [])) as? [String: Any]  else {
 
                 XCTFail("could not convert json data to dict from \(filename)")
                 return nil
@@ -44,7 +44,7 @@ extension XCTestCase {
             return nil
         }
 
-        guard let fileData = try? Data(contentsOf:fixturePath) else {
+        guard let fileData = try? Data(contentsOf: fixturePath) else {
 
             XCTFail("no test read data from bundle \(filename)")
             return nil
