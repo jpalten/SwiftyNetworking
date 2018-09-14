@@ -12,6 +12,7 @@ public class Networking {
 
     // Return IP address of WiFi interface (en0) as a String, or `nil`
     public class func getWiFiAddress() -> (String?, String?) {
+
         var address: String?
         var subnet: String?
 
@@ -22,6 +23,7 @@ public class Networking {
 
         // For each interface ...
         for ifptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
+
             let interface = ifptr.pointee
 
             // Check for IPv4 or IPv6 interface:
@@ -44,6 +46,7 @@ public class Networking {
                     if (getnameinfo(interface.ifa_addr, socklen_t(interface.ifa_addr.pointee.sa_len),
                                     &hostname, socklen_t(hostname.count),
                                     nil, socklen_t(0), NI_NUMERICHOST) == 0) {
+
                         if let ipAddress = String.init(validatingUTF8: hostname) {
 
                             address = ipAddress
@@ -52,6 +55,7 @@ public class Networking {
                             getnameinfo(interface.ifa_netmask, socklen_t(interface.ifa_netmask.pointee.sa_len), &netmaskName, socklen_t(netmaskName.count),
                                         nil, socklen_t(0), NI_NUMERICHOST)// == 0
                             if let netmask = String.init(validatingUTF8: netmaskName) {
+
                                 subnet = netmask
                             }
                         }
@@ -75,7 +79,7 @@ public class Networking {
     }
 
     public class var ipAddress: String? {
-        
+
         let (ipAddress, _ ) = Networking.getWiFiAddress()
         return ipAddress
     }

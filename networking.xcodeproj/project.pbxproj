@@ -290,6 +290,7 @@
 				60F7ADA01FD02CB1001E34F0 /* Frameworks */,
 				60F7ADA11FD02CB1001E34F0 /* Resources */,
 				60F7ADC71FD02E54001E34F0 /* Copy Frameworks */,
+				6053E585214BB98100A4B648 /* Clean swift */,
 			);
 			buildRules = (
 			);
@@ -384,6 +385,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6053E585214BB98100A4B648 /* Clean swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftclean=~/bin/swiftlint-clean.sh\n\nif [ -f $swiftclean ]; then\n$swiftclean\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60F7AD3D1FCF741B001E34F0 /* Sources */ = {

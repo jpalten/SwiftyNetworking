@@ -10,7 +10,7 @@ import SwiftyNetworking
 
 class ViewController: UIViewController {
 
-    var serialNumber: String? = nil
+    var serialNumber: String?
 
     override func viewDidLoad() {
 
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         print(ipAddress.byteString)
         print(macAddress.byteString)
 
-        let _ = "0f0f0a00d00f0".bytesFromHex
+        _ = "0f0f0a00d00f0".bytesFromHex
     }
 }
-
