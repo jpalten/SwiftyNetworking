@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Snmp
 
 class MacAddressTests: XCTestCase {
 

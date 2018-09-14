@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "60F7AD4F1FCF743D001E34F0"
-               BuildableName = "Snmp.framework"
+               BuildableName = "SwiftyNetworking.framework"
                BlueprintName = "Networking tvOS"
                ReferencedContainer = "container:networking.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "60F7AD4F1FCF743D001E34F0"
-            BuildableName = "Snmp.framework"
+            BuildableName = "SwiftyNetworking.framework"
             BlueprintName = "Networking tvOS"
             ReferencedContainer = "container:networking.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "60F7AD4F1FCF743D001E34F0"
-            BuildableName = "Snmp.framework"
+            BuildableName = "SwiftyNetworking.framework"
             BlueprintName = "Networking tvOS"
             ReferencedContainer = "container:networking.xcodeproj">
          </BuildableReference>

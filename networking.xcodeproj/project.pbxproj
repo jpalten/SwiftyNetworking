@@ -33,8 +33,6 @@
 		60F7AD9E1FCFED5A001E34F0 /* SwiftyNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60F7ADA81FD02CB2001E34F0 /* SwiftyNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; };
 		60F7ADC11FD02E17001E34F0 /* MacAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */; };
-		60F7ADC21FD02E17001E34F0 /* VendorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADB71FD02E15001E34F0 /* VendorTests.swift */; };
-		60F7ADC61FD02E17001E34F0 /* TestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */; };
 		60F7ADCA1FD03010001E34F0 /* SwiftyNetworking.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7AD421FCF741B001E34F0 /* SwiftyNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -102,8 +100,6 @@
 		60F7ADA31FD02CB1001E34F0 /* Networking_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Networking_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7ADA71FD02CB2001E34F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacAddressTests.swift; sourceTree = "<group>"; };
-		60F7ADB71FD02E15001E34F0 /* VendorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorTests.swift; sourceTree = "<group>"; };
-		60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,8 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */,
-				60F7ADBB1FD02E17001E34F0 /* TestsHelper.swift */,
-				60F7ADB71FD02E15001E34F0 /* VendorTests.swift */,
 				603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */,
 				60F7ADA71FD02CB2001E34F0 /* Info.plist */,
 			);
@@ -431,10 +425,8 @@
 			files = (
 				60ED2E0C214A86610056C720 /* IPAddress.swift in Sources */,
 				603A0E0A1FD035C200176FB8 /* XCTestCase+Extensions.swift in Sources */,
-				60F7ADC61FD02E17001E34F0 /* TestsHelper.swift in Sources */,
 				60ED2E11214A86890056C720 /* Extensions.swift in Sources */,
 				60ED2E0E214A86610056C720 /* MacAddress.swift in Sources */,
-				60F7ADC21FD02E17001E34F0 /* VendorTests.swift in Sources */,
 				60F7ADC11FD02E17001E34F0 /* MacAddressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
