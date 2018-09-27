@@ -144,3 +144,12 @@ extension IPAddress: CustomDebugStringConvertible {
         return byteString
     }
 }
+
+
+extension IPAddress: Encodable {
+
+    public func encode(to encoder: Encoder) throws {
+
+        try byteString.encode(to: encoder)
+    }
+}

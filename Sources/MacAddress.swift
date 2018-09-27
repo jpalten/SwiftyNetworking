@@ -136,3 +136,11 @@ extension MacAddress: printable {
 extension MacAddress: CustomStringConvertible {
 
 }
+
+extension MacAddress: Encodable {
+
+    public func encode(to encoder: Encoder) throws {
+
+        try hexString.encode(to: encoder)
+    }
+}
