@@ -145,11 +145,16 @@ extension IPAddress: CustomDebugStringConvertible {
     }
 }
 
-
-extension IPAddress: Encodable {
+extension IPAddress: Codable {
 
     public func encode(to encoder: Encoder) throws {
 
         try byteString.encode(to: encoder)
+    }
+
+    public init(from decoder: Decoder) throws {
+
+        let ipStr = try String(from: decoder)
+        self = IPAddress(ipStr)
     }
 }

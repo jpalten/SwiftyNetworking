@@ -53,4 +53,25 @@ class MacAddressTests: XCTestCase {
         }
     }
 
+    func testCodable() {
+
+        let mac = MacAddress("01:02:03:04:05:06")
+        let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
+
+        do {
+
+            let container = [ "mac": mac ]
+            let newData = try encoder.encode(container)
+
+            print(String(data: newData, encoding: .utf8) ?? "no proper data?")
+
+            let newContainer = try decoder.decode([String: MacAddress].self, from: newData)
+            XCTAssertEqual(newContainer["mac"], container["mac"])
+
+        } catch let error {
+
+            XCTFail("\(error)")
+        }
+    }
 }

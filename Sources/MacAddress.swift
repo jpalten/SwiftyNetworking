@@ -137,10 +137,16 @@ extension MacAddress: CustomStringConvertible {
 
 }
 
-extension MacAddress: Encodable {
+extension MacAddress: Codable {
 
     public func encode(to encoder: Encoder) throws {
 
         try hexString.encode(to: encoder)
+    }
+
+    public init(from decoder: Decoder) throws {
+
+        let hex = try String(from: decoder)
+        numbers = hex.bytesFromHex
     }
 }

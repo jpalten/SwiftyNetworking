@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		603A0E0A1FD035C200176FB8 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */; };
-		60C6D2CC2158C14400605D02 /* IPAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C6D2CB2158C14400605D02 /* IPAddressTests.swift */; };
+		60956807215FB1C500F798E2 /* IPAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60956806215FB1C500F798E2 /* IPAddressTests.swift */; };
 		60ED2E06214A85DA0056C720 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E03214A85D90056C720 /* Networking.swift */; };
 		60ED2E07214A85DA0056C720 /* NetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED2E04214A85D90056C720 /* NetworkInfo.m */; };
 		60ED2E08214A85DA0056C720 /* NetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 60ED2E05214A85DA0056C720 /* NetworkInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +80,7 @@
 
 /* Begin PBXFileReference section */
 		603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
-		60C6D2CB2158C14400605D02 /* IPAddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressTests.swift; sourceTree = "<group>"; };
+		60956806215FB1C500F798E2 /* IPAddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressTests.swift; sourceTree = "<group>"; };
 		60ED2E03214A85D90056C720 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		60ED2E04214A85D90056C720 /* NetworkInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInfo.m; sourceTree = "<group>"; };
 		60ED2E05214A85DA0056C720 /* NetworkInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInfo.h; sourceTree = "<group>"; };
@@ -140,7 +140,6 @@
 		60F7AD361FCF737F001E34F0 = {
 			isa = PBXGroup;
 			children = (
-				60C6D2CB2158C14400605D02 /* IPAddressTests.swift */,
 				60F7AD871FCFEA96001E34F0 /* NetworkingSampleApp_iOS */,
 				60F7ADA41FD02CB2001E34F0 /* Networking_iOSTests */,
 				60F7AD761FCF79EE001E34F0 /* Frameworks */,
@@ -200,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				60F7ADB61FD02E15001E34F0 /* MacAddressTests.swift */,
+				60956806215FB1C500F798E2 /* IPAddressTests.swift */,
 				603A0E091FD035C200176FB8 /* XCTestCase+Extensions.swift */,
 				60F7ADA71FD02CB2001E34F0 /* Info.plist */,
 			);
@@ -446,11 +446,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				60ED2E0C214A86610056C720 /* IPAddress.swift in Sources */,
-				60C6D2CC2158C14400605D02 /* IPAddressTests.swift in Sources */,
 				603A0E0A1FD035C200176FB8 /* XCTestCase+Extensions.swift in Sources */,
 				60ED2E11214A86890056C720 /* Extensions.swift in Sources */,
 				60ED2E0E214A86610056C720 /* MacAddress.swift in Sources */,
 				60F7ADC11FD02E17001E34F0 /* MacAddressTests.swift in Sources */,
+				60956807215FB1C500F798E2 /* IPAddressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
