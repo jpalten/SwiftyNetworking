@@ -15,15 +15,16 @@ public struct IPAddress: printable {
 
         return numbers.map { (byte) -> String in
 
-            return String(format: "%d", byte)
+            return String(byte)
             }.joined(separator: ".")
     }
     var hexString: String {
 
-        return numbers.reduce("") { (str, byte) -> String in
+        return numbers.map { (byte) -> String in
 
-            return str.appendingFormat("%02x", byte)
-        }
+            let hex = String(byte, radix: 16, uppercase: false)
+            return byte < 16 ? "0" + hex : hex
+            }.joined()
     }
     var uint32Value: UInt32 {
 
@@ -115,13 +116,7 @@ extension IPAddress: Equatable, Comparable {
 
     public static func < (lhs: IPAddress, rhs: IPAddress) -> Bool {
 
-        for (b1, b2) in zip(lhs.numbers, rhs.numbers) {
-
-            if b1 < b2 { return true }
-            if b1 > b2 { return false }
-        }
-        return false
-        //       return lhs.hexString < rhs.hexString
+        return lhs.uint32Value < rhs.uint32Value
     }
 }
 
@@ -129,7 +124,7 @@ extension IPAddress: Hashable {
 
     public var hashValue: Int {
 
-        return byteString.hash
+        return uint32Value.hashValue
     }
 }
 
