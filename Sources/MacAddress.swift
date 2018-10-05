@@ -12,23 +12,22 @@ import Foundation
 public struct MacAddress {
 
     let numbers: [UInt8]
-    public lazy var hexString: String  = {
+    public var hexString: String {
 
         return MacAddress.hexString(ofBytes: numbers)
-    }()
+    }
+
     var vendorPrefix: String {
 
-        let hexStr = numbers.map { (byte) -> String in
-
-            return String(format: "%02x", byte)
-            }.joined(separator: "")
+        let hexStr = hexString.replacingOccurrences(of: ":", with: "")
         return String(hexStr.prefix(6))
     }
+
     public var byteString: String {
 
         return numbers.map { (byte) -> String in
 
-            return String(format: "%d", byte)
+            return String(byte)
             }.joined(separator: ".")
     }
 
@@ -114,16 +113,13 @@ public struct MacAddress {
     }
 
 }
-//
-//extension MacAddress: CustomDebugStringConvertible {
-//    public var debugDescription: String {
-//        <#code#>
-//    }
-//
-//
-//    public var debugDescription: String { mutating get {return hexString }
-//    }
-//}
+extension MacAddress: CustomDebugStringConvertible {
+
+    public var debugDescription: String {
+
+        return hexString
+    }
+}
 
 extension MacAddress: Equatable {
 
@@ -131,13 +127,51 @@ extension MacAddress: Equatable {
 
         return lhs.numbers == rhs.numbers
     }
-//    public static func < ( lhs: MacAddress, var rhs: MacAddress) -> Bool {
+//    public static func < (lhs: MacAddress, rhs: MacAddress) -> Bool {
 //
-//        return lhs.hexString < rhs.hexString
+//        for (lh, rh) in zip(lhs.numbers, rhs.numbers) {
+//
+//            if lh < rh { return true }
+//            if lh > rh { return false }
+//        }
+//        return false
 //    }
+
+    public static func eq (lhs: MacAddress, rhs: MacAddress) -> Bool {
+
+        return lhs.hashValue == rhs.hashValue
+    }
+    public static func eq_str (lhs: MacAddress, rhs: MacAddress) -> Bool {
+
+        return lhs.hexString == rhs.hexString
+    }
+
+    public static func lt_str (lhs: MacAddress, rhs: MacAddress) -> Bool {
+
+        return lhs.hexString < rhs.hexString
+    }
+    public static func lt_numbers (lhs: MacAddress, rhs: MacAddress) -> Bool {
+
+        for (lh, rh) in zip(lhs.numbers, rhs.numbers) {
+
+            if lh < rh { return true }
+            if lh > rh { return false }
+        }
+        return false
+    }
+    public static func lt_hash (lhs: MacAddress, rhs: MacAddress) -> Bool {
+
+        return lhs.hashValue < rhs.hashValue
+    }
+
 }
 
 extension MacAddress: Hashable {
+
+    public var hashValue_string: Int {
+
+        return hexString.hash
+    }
 
     public var hashValue: Int {
 
@@ -146,25 +180,26 @@ extension MacAddress: Hashable {
             return result * 256 + Int(number)
         }
     }
+
 }
 
-//extension MacAddress: printable {
-//
-//    public var description: String {
-//
-//        return hexString
-//    }
-//}
+extension MacAddress: printable {
 
-//extension MacAddress: CustomStringConvertible {
-//
-//}
+    public var description: String {
+
+        return hexString
+    }
+}
+
+extension MacAddress: CustomStringConvertible {
+
+}
 
 extension MacAddress: Codable {
 
     public func encode(to encoder: Encoder) throws {
 
-        try MacAddress.hexString(ofBytes: numbers).encode(to: encoder)
+        try hexString.encode(to: encoder)
     }
 
     public init(from decoder: Decoder) throws {

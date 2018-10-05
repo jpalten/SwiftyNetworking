@@ -12,7 +12,7 @@ class MacAddressTests: XCTestCase {
 
     func testConversion() {
 
-        var macAddress = MacAddress( bytes: (1, 2, 3, 4, 5, 6) )
+        let macAddress = MacAddress( bytes: (1, 2, 3, 4, 5, 6) )
         XCTAssertEqual(macAddress.hexString, "01:02:03:04:05:06")
         XCTAssertEqual(macAddress.byteString, "1.2.3.4.5.6")
     }
@@ -20,7 +20,7 @@ class MacAddressTests: XCTestCase {
     func testInitHex() {
 
         let macStr = "9c:8e:99:85:c6:4f"
-        var macAddress = MacAddress(hex: macStr)
+        let macAddress = MacAddress(hex: macStr)
         XCTAssertEqual(macAddress.hexString, macStr)
         print(macAddress.byteString)
     }
@@ -48,7 +48,7 @@ class MacAddressTests: XCTestCase {
 
         for (input, output) in tests {
 
-            var macAddress = MacAddress(input)
+            let macAddress = MacAddress(input)
             XCTAssertEqual(macAddress?.hexString, output)
         }
     }
@@ -109,6 +109,103 @@ class MacAddressTests: XCTestCase {
             for _ in 0..<MAX_COUNT {
 
                 _ = MacAddress.hexFormatted_2(ofBytes: numbers)
+            }
+        }
+    }
+
+    func testPerformanceHash() {
+
+        let macAddress = MacAddress(numbers: numbers)
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = macAddress.hashValue
+            }
+        }
+    }
+    func testPerformanceHash1() {
+
+        let macAddress = MacAddress(numbers: numbers)
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = macAddress.hashValue_string
+            }
+        }
+    }
+    func testPerformanceEqual1() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = macAddress1 == macAddress2
+            }
+        }
+    }
+    func testPerformanceEqual2() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.eq( lhs: macAddress1, rhs: macAddress2)
+            }
+        }
+    }
+    func testPerformanceEqual3() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.eq_str( lhs: macAddress1, rhs: macAddress2)
+            }
+        }
+    }
+
+    func testPerformanceLessThan2() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.lt_str( lhs: macAddress1, rhs: macAddress2)
+            }
+        }
+    }
+
+    func testPerformanceLessThan1() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.lt_numbers( lhs: macAddress1, rhs: macAddress2)
+            }
+        }
+    }
+    func testPerformanceLessThan3() {
+
+        let macAddress1 = MacAddress(numbers: numbers)
+        let macAddress2 = MacAddress(hex: "08:07:06:05:04:03")
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.lt_hash( lhs: macAddress1, rhs: macAddress2)
             }
         }
     }
