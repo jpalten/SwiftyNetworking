@@ -88,16 +88,31 @@ public struct MacAddress {
 
     public var isValid: Bool {
 
-        return numbers.count == 6 && numbers != [0,0,0,0,0,0] && numbers != [255,255,255,255,255,255]
+        return numbers.count == 6 && numbers != [0, 0, 0, 0, 0, 0] && numbers != [255, 255, 255, 255, 255, 255]
     }
 
-    fileprivate static func hexString(ofBytes numbers: [UInt8]) -> String {
+    internal static func hexString(ofBytes numbers: [UInt8]) -> String {
+
+        return numbers.map { (byte) -> String in
+
+            let hex = String(byte, radix: 16, uppercase: false)
+            return byte < 16 ? "0" + hex : hex
+            }.joined(separator: ":")
+    }
+
+    internal static func hexFormatted_1(ofBytes numbers: [UInt8]) -> String {
 
         return numbers.map { (byte) -> String in
 
             return String(format: "%02x", byte)
             }.joined(separator: ":")
     }
+
+    internal static func hexFormatted_2(ofBytes numbers: [UInt8]) -> String {
+
+        return String(format: "%02x:%02x:%02x:%02x:%02x:%02x", arguments: numbers)
+    }
+
 }
 //
 //extension MacAddress: CustomDebugStringConvertible {

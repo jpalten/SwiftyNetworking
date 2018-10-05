@@ -28,7 +28,7 @@ class MacAddressTests: XCTestCase {
     func testInitHexNoZeros() {
 
         let macStr = "0:e:99:85:c6:4f"
-        let macAddress = MacAddress(hex: macStr)
+        var macAddress = MacAddress(hex: macStr)
         XCTAssertEqual(macAddress.hexString, "00:0e:99:85:c6:4f")
         print(macAddress.byteString)
     }
@@ -74,4 +74,43 @@ class MacAddressTests: XCTestCase {
             XCTFail("\(error)")
         }
     }
+
+    let MAX_COUNT = 10000
+    let numbers = [1, 2, 3, 4, 5, 6].map { UInt8($0) }
+
+    func testPerformanceHexStrings1() {
+
+        // This is an example of a performance test case.
+
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.hexString(ofBytes: numbers)
+            }
+        }
+    }
+
+    func testPerformanceHexStrings2() {
+
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.hexFormatted_1(ofBytes: numbers)
+            }
+        }
+    }
+
+    func testPerformanceHexStrings3() {
+
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
+                _ = MacAddress.hexFormatted_2(ofBytes: numbers)
+            }
+        }
+    }
+
 }
