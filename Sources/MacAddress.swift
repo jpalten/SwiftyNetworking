@@ -12,13 +12,10 @@ import Foundation
 public struct MacAddress {
 
     let numbers: [UInt8]
-    public var hexString: String {
+    public lazy var hexString: String  = {
 
-        return numbers.map { (byte) -> String in
-
-            return String(format: "%02x", byte)
-            }.joined(separator: ":")
-    }
+        return MacAddress.hexString(ofBytes: numbers)
+    }()
     var vendorPrefix: String {
 
         let hexStr = numbers.map { (byte) -> String in
@@ -91,57 +88,68 @@ public struct MacAddress {
 
     public var isValid: Bool {
 
-        return numbers.count == 6 &&
-            hexString != "00:00:00:00:00:00" &&
-            hexString != "ff:ff:ff:ff:ff:ff"
+        return numbers.count == 6 && numbers != [0,0,0,0,0,0] && numbers != [255,255,255,255,255,255]
+    }
+
+    fileprivate static func hexString(ofBytes numbers: [UInt8]) -> String {
+
+        return numbers.map { (byte) -> String in
+
+            return String(format: "%02x", byte)
+            }.joined(separator: ":")
     }
 }
+//
+//extension MacAddress: CustomDebugStringConvertible {
+//    public var debugDescription: String {
+//        <#code#>
+//    }
+//
+//
+//    public var debugDescription: String { mutating get {return hexString }
+//    }
+//}
 
-extension MacAddress: CustomDebugStringConvertible {
-
-    public var debugDescription: String {
-
-        return hexString
-    }
-}
-
-extension MacAddress: Equatable, Comparable {
+extension MacAddress: Equatable {
 
     public static func == (lhs: MacAddress, rhs: MacAddress) -> Bool {
 
         return lhs.numbers == rhs.numbers
     }
-    public static func < (lhs: MacAddress, rhs: MacAddress) -> Bool {
-
-        return lhs.hexString < rhs.hexString
-    }
+//    public static func < ( lhs: MacAddress, var rhs: MacAddress) -> Bool {
+//
+//        return lhs.hexString < rhs.hexString
+//    }
 }
 
 extension MacAddress: Hashable {
 
     public var hashValue: Int {
 
-        return hexString.hash
+        return numbers.reduce(0) { result, number in
+
+            return result * 256 + Int(number)
+        }
     }
 }
 
-extension MacAddress: printable {
+//extension MacAddress: printable {
+//
+//    public var description: String {
+//
+//        return hexString
+//    }
+//}
 
-    public var description: String {
-
-        return hexString
-    }
-}
-
-extension MacAddress: CustomStringConvertible {
-
-}
+//extension MacAddress: CustomStringConvertible {
+//
+//}
 
 extension MacAddress: Codable {
 
     public func encode(to encoder: Encoder) throws {
 
-        try hexString.encode(to: encoder)
+        try MacAddress.hexString(ofBytes: numbers).encode(to: encoder)
     }
 
     public init(from decoder: Decoder) throws {

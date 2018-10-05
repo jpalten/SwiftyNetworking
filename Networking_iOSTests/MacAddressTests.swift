@@ -12,7 +12,7 @@ class MacAddressTests: XCTestCase {
 
     func testConversion() {
 
-        let macAddress = MacAddress( bytes: (1, 2, 3, 4, 5, 6) )
+        var macAddress = MacAddress( bytes: (1, 2, 3, 4, 5, 6) )
         XCTAssertEqual(macAddress.hexString, "01:02:03:04:05:06")
         XCTAssertEqual(macAddress.byteString, "1.2.3.4.5.6")
     }
@@ -20,7 +20,7 @@ class MacAddressTests: XCTestCase {
     func testInitHex() {
 
         let macStr = "9c:8e:99:85:c6:4f"
-        let macAddress = MacAddress(hex: macStr)
+        var macAddress = MacAddress(hex: macStr)
         XCTAssertEqual(macAddress.hexString, macStr)
         print(macAddress.byteString)
     }
@@ -48,7 +48,7 @@ class MacAddressTests: XCTestCase {
 
         for (input, output) in tests {
 
-            let macAddress = MacAddress(input)
+            var macAddress = MacAddress(input)
             XCTAssertEqual(macAddress?.hexString, output)
         }
     }
