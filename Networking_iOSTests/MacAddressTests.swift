@@ -120,6 +120,18 @@ class MacAddressTests: XCTestCase {
 
             for _ in 0..<MAX_COUNT {
 
+                _ = macAddress.hashValue_32
+            }
+        }
+    }
+
+    func testPerformanceHash64() {
+
+        let macAddress = MacAddress(numbers: numbers)
+        self.measure {
+
+            for _ in 0..<MAX_COUNT {
+
                 _ = macAddress.hashValue
             }
         }

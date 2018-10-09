@@ -173,12 +173,26 @@ extension MacAddress: Hashable {
         return hexString.hash
     }
 
-    public var hashValue: Int {
+    public var hashValue_32: Int {
 
         return numbers.reduce(0) { result, number in
 
             return result * 256 + Int(number)
         }
+    }
+
+    public var hashValue: Int {
+
+        return asUInt64.hashValue
+    }
+
+    private var asUInt64: UInt64 {
+
+        return numbers.reduce(UInt64(0)) { result, number in
+
+            return result * 256 + UInt64(number)
+        }
+
     }
 
 }
